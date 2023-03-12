@@ -74,7 +74,7 @@ export class AppColor {
   static secondary = 'rgba(215, 44, 13, 1)';
   static secondarySurface = '#e4e5e7';
   static text = '#5E5C7F';
-  static textSecondary = '#e3e5e7';
+  static textSecondary = '#8B88B1';
   static textDisabled = '#8c9196';
 }
 
