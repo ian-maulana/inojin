@@ -5,6 +5,7 @@ export class AppSize {
   static s5 = '5px';
   static s8 = '8px';
   static s10 = '10px';
+  static s12 = '12px';
   static s16 = '16px';
   static s18 = '18px';
   static s20 = '20px';
@@ -23,8 +24,7 @@ export class AppSize {
 }
 
 export class AppFontFamily {
-  static default = '"Montserrat", sans-serif';
-  static strong = '"Poppins", sans-serif';
+  static default = '"Rubik", sans-serif';
 }
 
 export class AppRadius {
@@ -61,6 +61,7 @@ export class AppFontSize {
 
 export class AppColor {
   static white = '#fff';
+  static primary = '#FF4C60';
   static success = 'rgba(0, 123, 92, 1)';
   static successSurface = '#aee9d1';
   static critical = 'rgba(215, 44, 13, 1)';
@@ -71,7 +72,7 @@ export class AppColor {
   static warningSurface = '#ffea8a';
   static secondary = 'rgba(215, 44, 13, 1)';
   static secondarySurface = '#e4e5e7';
-  static text = '#202223';
+  static text = '#5E5C7F';
   static textSecondary = '#e3e5e7';
   static textDisabled = '#8c9196';
 }
@@ -144,11 +145,13 @@ export const theme = createTheme({
 });
 
 export const config = css`
+  @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap');
+
   html,
   body {
     padding: 0;
     margin: 0;
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    font-family: 'Rubik', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
       Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
       sans-serif;
     font-weight: ${AppFontWeight.regular};
@@ -177,7 +180,7 @@ export const config = css`
   }
 
   p {
-    font-size: ${AppFontSize.s14};
+    font-size: ${AppFontSize.s16};
     margin: 0 0 10px;
   }
 
