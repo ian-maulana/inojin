@@ -71,7 +71,7 @@ export class AppColor {
   static infoSurface = '#a4e8f2';
   static warning = 'rgba(215, 44, 13, 1)';
   static warningSurface = '#ffea8a';
-  static secondary = 'rgba(215, 44, 13, 1)';
+  static secondary = '#6C6CE5';
   static secondarySurface = '#e4e5e7';
   static text = '#5E5C7F';
   static textSecondary = '#8B88B1';

@@ -6,7 +6,7 @@ import { Button } from './styles';
 interface Props {
   children?: React.ReactNode;
   type?: 'button' | 'submit' | 'reset';
-  color?: 'primary' | 'secondary' | 'error';
+  color?: 'primary' | 'secondary';
   disabled?: boolean;
   className?: string;
   onClick?: any;
@@ -14,7 +14,7 @@ interface Props {
   loading?: boolean;
   fullWidth?: boolean;
   rounded?: boolean;
-  size?: 'lg' | 'md' | 'sm';
+  size?: 'md' | 'sm';
   title?: string;
 }
 
@@ -24,9 +24,10 @@ const ContainedButton: React.FC<Props> = ({
   children,
   disabled,
   className,
-  onClick: click,
+  onClick,
   loading,
   fullWidth,
+  size,
 }) => {
   return (
     <>
@@ -34,9 +35,10 @@ const ContainedButton: React.FC<Props> = ({
         type={type ?? 'button'}
         className={className}
         disabled={disabled === true || loading === true}
-        onClick={click}
-        color={color}
+        onClick={onClick}
+        color={color ?? 'primary'}
         fullWidth={fullWidth ?? false}
+        size={size ?? 'md'}
       >
         {loading && <Loader sx={{ ml: 0, mr: AppSize.s10 }} />}
         {children}

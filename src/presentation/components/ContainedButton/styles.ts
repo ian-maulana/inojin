@@ -10,6 +10,8 @@ import {
 interface Props {
   theme?: Theme;
   fullWidth: boolean;
+  size: 'md' | 'sm';
+  color: 'primary' | 'secondary';
 }
 
 export const Button = styled('button')((props: Props) => {
@@ -17,7 +19,6 @@ export const Button = styled('button')((props: Props) => {
     display: 'inline-flex',
     alignItems: 'center',
     fontFamily: AppFontFamily.default,
-    fontWeight: AppFontWeight.bold,
     lineHeight: 1,
     color: AppColor.white,
     justifyContent: 'center',
@@ -27,13 +28,15 @@ export const Button = styled('button')((props: Props) => {
     userSelect: 'none',
     borderWidth: '1px',
     borderStyle: 'solid',
-    backgroundColor: AppColor.primary,
-    borderColor: AppColor.primary,
-    paddingTop: AppSize.s12,
-    paddingBottom: AppSize.s12,
-    paddingLeft: AppSize.s32,
-    paddingRight: AppSize.s32,
-    fontSize: AppFontSize.s16,
+    backgroundColor: AppColor[props.color],
+    borderColor: AppColor[props.color],
+    paddingTop: props.size === 'sm' ? AppSize.s8 : AppSize.s12,
+    paddingBottom: props.size === 'sm' ? AppSize.s8 : AppSize.s12,
+    paddingLeft: props.size === 'sm' ? AppSize.s18 : AppSize.s32,
+    paddingRight: props.size === 'sm' ? AppSize.s18 : AppSize.s32,
+    fontSize: props.size === 'sm' ? AppFontSize.s12 : AppFontSize.s16,
+    fontWeight:
+      props.size === 'sm' ? AppFontWeight.semiBold : AppFontWeight.bold,
     borderRadius: AppSize.s32,
     transition: `color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out`,
     width: props.fullWidth ? '100%' : 'auto',
