@@ -41,13 +41,13 @@ const Experience: React.FC<Props> = () => {
       <Heading>Experience</Heading>
 
       <Grid container spacing={3} marginBottom="60px">
-        <Grid xs={12} sm={6}>
+        <Grid xs={12} md={6}>
           <Card>
             <Timeline lists={educations} />
           </Card>
         </Grid>
 
-        <Grid xs={12} sm={6}>
+        <Grid xs={12} md={6}>
           <Card>
             <Timeline lists={educations} />
           </Card>

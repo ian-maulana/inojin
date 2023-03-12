@@ -69,7 +69,7 @@ export class AppColor {
   static criticalSurface = '#fed3d1';
   static info = 'rgba(215, 44, 13, 1)';
   static infoSurface = '#a4e8f2';
-  static warning = 'rgba(215, 44, 13, 1)';
+  static warning = '#ffd15c';
   static warningSurface = '#ffea8a';
   static secondary = '#6C6CE5';
   static secondarySurface = '#e4e5e7';
