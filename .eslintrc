@@ -1,0 +1,15 @@
+{
+  "extends": ["react-app", "react-app/jest", "prettier"],
+  "rules": {
+    "no-console": "error",
+    "react/display-name": 0,
+    "no-unused-vars": [
+      "error",
+      {
+        "vars": "all",
+        "argsIgnorePattern": "_",
+        "caughtErrorsIgnorePattern": "_"
+      }
+    ]
+  }
+}
