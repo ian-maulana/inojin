@@ -1,12 +1,14 @@
-import { useTranslation } from 'react-i18next';
+import { Outlet } from 'react-router-dom';
+import { Container } from './styles';
 
 interface Props {}
 
 const Main: React.FC<Props> = () => {
-  const { t } = useTranslation('translation');
   return (
     <>
-      <div>{t('learn_react')}</div>
+      <Container>
+        <Outlet />
+      </Container>
     </>
   );
 };
