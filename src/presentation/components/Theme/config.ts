@@ -6,6 +6,7 @@ export class AppSize {
   static s8 = '8px';
   static s10 = '10px';
   static s12 = '12px';
+  static s14 = '14px';
   static s16 = '16px';
   static s18 = '18px';
   static s20 = '20px';
@@ -173,7 +174,7 @@ export const config = css`
   h4,
   h5,
   h6 {
-    color: ${AppColor.text};
+    color: #454360;
     font-family: ${AppFontFamily.default};
     margin-top: 0;
     margin-bottom: 10px;

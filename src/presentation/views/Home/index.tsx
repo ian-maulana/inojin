@@ -1,20 +1,16 @@
-import Card from '@components/Card';
-import ContainedButton from '@components/ContainedButton';
+import Grid from '@mui/system/Unstable_Grid/Grid';
+import About from '@containers/About';
 
 interface Props {}
 
 const Home: React.FC<Props> = () => {
   return (
     <>
-      <Card>
-        <p>
-          I am Bolby Doe, web developer from London, United Kingdom. I have rich
-          experience in web site design and building and customization, also I
-          am good at WordPress.
-        </p>
-
-        <ContainedButton>Download CV</ContainedButton>
-      </Card>
+      <Grid container spacing={3}>
+        <Grid xs={12}>
+          <About />
+        </Grid>
+      </Grid>
     </>
   );
 };
