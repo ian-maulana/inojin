@@ -7,7 +7,7 @@ import {
 import { styled } from '@mui/system';
 
 export const Container = styled('div')(() => ({
-  marginBottom: AppSize.s20,
+  padding: '8px 0',
 }));
 
 export const Title = styled('div')(() => ({

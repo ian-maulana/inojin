@@ -13,7 +13,6 @@ interface Props {
   style?: object;
   loading?: boolean;
   fullWidth?: boolean;
-  rounded?: boolean;
   size?: 'md' | 'sm';
   title?: string;
 }

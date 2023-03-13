@@ -6,7 +6,7 @@ export const Title = styled('div')(() => ({
   fontWeight: AppFontWeight.bold,
   margin: 0,
   marginLeft: AppSize.s14,
-  marginBottom: AppSize.s16,
+  marginBottom: AppSize.s24,
   position: 'relative',
 
   '&::before': {

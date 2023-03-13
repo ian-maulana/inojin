@@ -1,4 +1,5 @@
 import About from '@containers/About';
+import Contact from '@containers/Contact';
 import Experience from '@containers/Experience';
 import Portofolio from '@containers/Portofolio';
 
@@ -10,6 +11,7 @@ const Home: React.FC<Props> = () => {
       <About />
       <Experience />
       <Portofolio />
+      <Contact />
     </>
   );
 };

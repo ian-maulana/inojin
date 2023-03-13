@@ -16,7 +16,7 @@ const About: React.FC<Props> = () => {
     <>
       <Heading>Who am i?</Heading>
 
-      <Grid container spacing={3} marginBottom="60px">
+      <Grid container columnSpacing={0} marginBottom="60px">
         <Grid
           xs={12}
           md={3}
@@ -35,17 +35,19 @@ const About: React.FC<Props> = () => {
         </Grid>
         <Grid xs={12} md={9}>
           <Card>
-            <Grid container spacing={2}>
+            <Grid container rowSpacing={2} columnSpacing={3}>
               <Grid xs={12} sm={6}>
-                <Box component="p">
+                <Box
+                  component="p"
+                  marginBottom="16px"
+                  fontSize={AppFontSize.s14}
+                >
                   I am Bolby Doe, web developer from London, United Kingdom. I
                   have rich experience in web site design and building and
                   customization, also I am good at WordPress.
                 </Box>
 
-                <Box margin="16px 0">
-                  <ContainedButton>Hire Me!</ContainedButton>
-                </Box>
+                <ContainedButton>Hire Me!</ContainedButton>
               </Grid>
 
               <Grid xs={12} sm={6}>

@@ -1,25 +1,16 @@
 import { AvatarImage } from './styles';
 
-interface Props {
+export interface AvatarProps {
   name: string;
   size: string;
-  round?: string;
+  round?: string | boolean;
+  fontColor?: string;
   color?: string;
-  bgColor?: string;
   fontSize?: string;
 }
 
-const Avatar: React.FC<Props> = ({ name, size, color, round, fontSize }) => {
-  return (
-    <AvatarImage
-      name={name}
-      size={size}
-      round={round ?? true}
-      fontColor={color}
-      fontSize={fontSize}
-      maxInitials={2}
-    />
-  );
+const Avatar: React.FC<AvatarProps> = ({ ...props }) => {
+  return <AvatarImage {...props} maxInitials={2} />;
 };
 
 export default Avatar;

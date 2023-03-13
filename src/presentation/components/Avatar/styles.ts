@@ -1,5 +1,6 @@
 import ReactAvatar from 'react-avatar';
 import { styled } from '@mui/system';
+import { AvatarProps } from './index';
 import {
   AppColor,
   AppFontFamily,
@@ -7,12 +8,7 @@ import {
   AppFontWeight,
 } from '@components/Theme/config';
 
-interface Theme {
-  fontSize: string | undefined;
-  fontColor: string | undefined;
-}
-
-export const AvatarImage = styled(ReactAvatar)((props: Theme) => ({
+export const AvatarImage = styled(ReactAvatar)((props: AvatarProps) => ({
   '& span': {
     fontSize: props.fontSize ?? AppFontSize.s16,
     fontWeight: AppFontWeight.medium,
