@@ -1,5 +1,5 @@
-import { AppColor } from '@components/Theme/config';
 import { styled, spacing } from '@mui/system';
+import { Colors } from '@resources/utils/ColorManager';
 
 export const Container = styled('div')((props: any) => {
   return {
@@ -9,7 +9,7 @@ export const Container = styled('div')((props: any) => {
     borderRadius: '50%',
     borderTopStyle: 'solid',
     borderTopWidth: '2px',
-    borderTopColor: AppColor.info,
+    borderTopColor: Colors.info,
     width: '16px',
     height: '16px',
     WebkitAnimation: 'spin 2s linear infinite',

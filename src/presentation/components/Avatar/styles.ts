@@ -1,18 +1,15 @@
 import ReactAvatar from 'react-avatar';
 import { styled } from '@mui/system';
+import { Colors } from '@resources/utils/ColorManager';
+import { FontSize, FontWeight, FontFamily } from '@resources/utils/FontManager';
+
 import { AvatarProps } from './index';
-import {
-  AppColor,
-  AppFontFamily,
-  AppFontSize,
-  AppFontWeight,
-} from '@components/Theme/config';
 
 export const AvatarImage = styled(ReactAvatar)((props: AvatarProps) => ({
   '& span': {
-    fontSize: props.fontSize ?? AppFontSize.s16,
-    fontWeight: AppFontWeight.medium,
-    fontFamily: AppFontFamily.default,
-    color: props.fontColor ?? AppColor.white,
+    fontSize: props.fontSize ?? FontSize.s16,
+    fontWeight: FontWeight.medium,
+    fontFamily: FontFamily.default,
+    color: props.fontColor ?? Colors.white,
   },
 }));

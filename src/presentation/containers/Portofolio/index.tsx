@@ -1,4 +1,4 @@
-import { Fragment, useMemo } from 'react';
+import { Fragment, memo, useMemo } from 'react';
 
 import Heading from '@components/Heading';
 import Grid from '@mui/system/Unstable_Grid/Grid';
@@ -56,4 +56,4 @@ const Portofolio: React.FC<Props> = () => {
   );
 };
 
-export default Portofolio;
+export default memo(Portofolio);

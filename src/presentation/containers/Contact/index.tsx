@@ -1,6 +1,10 @@
+import { memo } from 'react';
+import { Trans, useTranslation } from 'react-i18next';
+
 import { FormRenderProps } from 'react-final-form';
 import { required } from '@app/Validators';
-import { AppColor, AppFontSize, AppFontWeight } from '@components/Theme/config';
+import { Colors } from '@resources/utils/ColorManager';
+import { FontSize, FontWeight } from '@resources/utils/FontManager';
 
 import Box from '@mui/system/Box';
 import Grid from '@mui/system/Unstable_Grid';
@@ -15,36 +19,47 @@ import ContainedButton from '@components/ContainedButton';
 interface Props {}
 
 const Contact: React.FC<Props> = () => {
+  const { t } = useTranslation('translation');
+
+  const eventSubmit = (data: any) => {
+    const msg = `Halo nama saya ${data.name} <${data.email}>. Saya ingin diskusi ${data.subject}. ${data.message}`;
+    const phone = process.env.REACT_APP_PHONE;
+    window.open(`https://wa.me/${phone}?text=${msg}`, '_blank');
+  };
+
   return (
-    <>
+    <Box margin="150px 0" id="contact">
       <Box
         component="div"
-        fontSize={AppFontSize.s32}
-        fontWeight={AppFontWeight.bold}
+        fontSize={FontSize.s32}
+        fontWeight={FontWeight.bold}
         textAlign="center"
+        color={Colors.textBold}
       >
-        Let's talk about everything!
+        {t('contact_title')}
       </Box>
       <Box
         component="p"
-        fontSize={AppFontSize.s18}
-        fontWeight={AppFontWeight.medium}
+        fontSize={FontSize.s18}
+        fontWeight={FontWeight.medium}
         textAlign="center"
-        color="#8B88B1"
+        color={Colors.text}
       >
-        Don't like forms? Send me an{' '}
-        <Box
-          component="a"
-          href="#"
-          fontSize={AppFontSize.s18}
-          fontWeight={AppFontWeight.medium}
-          color={AppColor.primary}
-        >
-          email
-        </Box>
+        <Trans
+          i18nKey="contact_subtitle"
+          components={[
+            <Box
+              component="a"
+              href={`mailto:${process.env.REACT_APP_EMAIL}`}
+              fontSize={FontSize.s18}
+              fontWeight={FontWeight.medium}
+              color={Colors.primary}
+            />,
+          ]}
+        />
       </Box>
 
-      <Form onSubmit={() => null} values={{}}>
+      <Form onSubmit={eventSubmit} values={{}}>
         {({ handleSubmit, submitting }: FormRenderProps) => (
           <form onSubmit={handleSubmit}>
             <Grid container columnSpacing={4} rowSpacing={1} margin="36px 0">
@@ -54,8 +69,8 @@ const Contact: React.FC<Props> = () => {
                     as={TextField}
                     type="text"
                     name="name"
-                    label="Name"
-                    placeholder="Your Name"
+                    label={t('input_name_label')}
+                    placeholder={t('input_name_placeholder')}
                     inputSize="lg"
                     validate={[required]}
                   />
@@ -68,9 +83,9 @@ const Contact: React.FC<Props> = () => {
                     as={TextField}
                     type="email"
                     name="email"
-                    label="Email Address"
+                    label={t('input_email_label')}
+                    placeholder={t('input_email_placeholder')}
                     inputSize="lg"
-                    placeholder="Your Email Address"
                     validate={[required]}
                   />
                 </FormGroup>
@@ -82,8 +97,8 @@ const Contact: React.FC<Props> = () => {
                     as={TextField}
                     type="text"
                     name="subject"
-                    label="Subject"
-                    placeholder="Subject"
+                    label={t('input_subject_label')}
+                    placeholder={t('input_subject_placeholder')}
                     inputSize="lg"
                     validate={[required]}
                   />
@@ -95,9 +110,9 @@ const Contact: React.FC<Props> = () => {
                   <FormControl
                     as={TextareaField}
                     name="message"
-                    label="Message"
+                    label={t('input_message_label')}
+                    placeholder={t('input_message_placeholder')}
                     inputSize="lg"
-                    placeholder="Message"
                     validate={[required]}
                   />
                 </FormGroup>
@@ -109,15 +124,15 @@ const Contact: React.FC<Props> = () => {
                   type="submit"
                   fullWidth
                 >
-                  Send Message
+                  {t('contact_submit_btn')}
                 </ContainedButton>
               </Grid>
             </Grid>
           </form>
         )}
       </Form>
-    </>
+    </Box>
   );
 };
 
-export default Contact;
+export default memo(Contact);

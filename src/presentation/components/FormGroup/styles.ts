@@ -1,22 +1,19 @@
 import { styled } from '@mui/system';
-import {
-  AppColor,
-  AppSize,
-  AppFontWeight,
-  AppFontSize,
-} from '@components/Theme/config';
+import { Colors } from '@resources/utils/ColorManager';
+import { FontWeight, FontSize } from '@resources/utils/FontManager';
+import { Sizes } from '@resources/utils/SizesManager';
 
 import { FormGroupProps } from './index';
 
 export const Container = styled('div')((props: FormGroupProps) => ({
-  marginBottom: props.size === 'lg' ? AppSize.s24 : AppSize.s16,
+  marginBottom: props.size === 'lg' ? Sizes.s24 : Sizes.s16,
 }));
 
 export const Label = styled('label')({
-  fontWeight: AppFontWeight.semiBold,
-  fontSize: AppFontSize.s12,
-  marginBottom: AppSize.s5,
+  fontWeight: FontWeight.semiBold,
+  fontSize: FontSize.s12,
+  marginBottom: Sizes.s5,
   display: 'block',
-  color: AppColor.text,
+  color: Colors.text,
   textTransform: 'capitalize',
 });

@@ -1,7 +1,7 @@
 import Loader from '@components/Loader';
-import { AppSize } from '@components/Theme/config';
 
 import { Button } from './styles';
+import { Sizes } from '@resources/utils/SizesManager';
 
 interface Props {
   children?: React.ReactNode;
@@ -27,6 +27,7 @@ const ContainedButton: React.FC<Props> = ({
   loading,
   fullWidth,
   size,
+  ...props
 }) => {
   return (
     <>
@@ -38,8 +39,9 @@ const ContainedButton: React.FC<Props> = ({
         color={color ?? 'primary'}
         fullWidth={fullWidth ?? false}
         size={size ?? 'md'}
+        {...props}
       >
-        {loading && <Loader sx={{ ml: 0, mr: AppSize.s10 }} />}
+        {loading && <Loader sx={{ ml: 0, mr: Sizes.s10 }} />}
         {children}
       </Button>
     </>

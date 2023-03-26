@@ -1,34 +1,31 @@
 import { styled } from '@mui/system';
-import {
-  AppColor,
-  AppFontSize,
-  AppFontWeight,
-  AppSize,
-} from '@components/Theme/config';
+import { Colors } from '@resources/utils/ColorManager';
+import { FontSize, FontWeight } from '@resources/utils/FontManager';
+import { Sizes } from '@resources/utils/SizesManager';
 
 export const Year = styled('div')(() => ({
-  fontSize: AppFontSize.s14,
-  fontWeight: AppFontWeight.regular,
-  color: AppColor.textSecondary,
+  fontSize: FontSize.s14,
+  fontWeight: FontWeight.regular,
+  color: Colors.textSecondary,
 }));
 
 export const Title = styled('div')(() => ({
-  fontSize: AppFontSize.s18,
-  fontWeight: AppFontWeight.bold,
-  color: AppColor.text,
-  marginTop: AppSize.s5,
-  marginBottom: AppSize.s5,
+  fontSize: FontSize.s18,
+  fontWeight: FontWeight.bold,
+  color: Colors.textBold,
+  marginTop: Sizes.s5,
+  marginBottom: Sizes.s5,
 }));
 
 export const Description = styled('p')(() => ({
-  marginBottom: AppSize.s36,
-  color: AppColor.text,
+  marginBottom: Sizes.s36,
+  color: Colors.text,
 }));
 
 export const List = styled('ul')(() => ({
   listStyleType: 'none',
-  color: AppColor.primary,
-  padding: '10px 0 10px 24px',
+  color: Colors.primary,
+  padding: '10px 0 0 24px',
 
   '& li': {
     position: 'relative',
@@ -40,7 +37,7 @@ export const List = styled('ul')(() => ({
       height: '8px',
       left: '-24px',
       top: '6px',
-      backgroundColor: AppColor.primary,
+      backgroundColor: Colors.primary,
     },
   },
 }));

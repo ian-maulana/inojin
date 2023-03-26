@@ -1,21 +1,24 @@
 import { styled } from '@mui/system';
-import { AppFontSize, AppFontWeight, AppSize } from '@components/Theme/config';
+import { Colors } from '@resources/utils/ColorManager';
+import { FontSize, FontWeight } from '@resources/utils/FontManager';
+import { Sizes } from '@resources/utils/SizesManager';
 
 export const Title = styled('div')(() => ({
-  fontSize: AppFontSize.s36,
-  fontWeight: AppFontWeight.bold,
+  fontSize: FontSize.s36,
+  fontWeight: FontWeight.bold,
   margin: 0,
-  marginLeft: AppSize.s14,
-  marginBottom: AppSize.s24,
+  marginLeft: Sizes.s14,
+  marginBottom: Sizes.s32,
   position: 'relative',
+  color: Colors.textBold,
 
   '&::before': {
     content: '""',
     backgroundImage: `url(https://jthemes.net/themes/html/bolby/demo/images/dots-bg.svg)`,
     display: 'block',
     height: '37px',
-    left: `-${AppSize.s14}`,
-    top: `-${AppSize.s14}`,
+    left: `-${Sizes.s14}`,
+    top: `-${Sizes.s14}`,
     position: 'absolute',
     width: '37px',
   },

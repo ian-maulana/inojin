@@ -1,23 +1,20 @@
 import { styled } from '@mui/system';
-import {
-  AppColor,
-  AppFontSize,
-  AppFontWeight,
-  AppSize,
-} from '@components/Theme/config';
+import { Colors } from '@resources/utils/ColorManager';
+import { FontSize, FontWeight } from '@resources/utils/FontManager';
+import { Sizes } from '@resources/utils/SizesManager';
 
 export const Container = styled('div')(() => ({
-  backgroundColor: AppColor.white,
+  backgroundColor: Colors.white,
   boxShadow: '0px 5px 20px 0px rgba(69, 67, 96, 0.1)',
-  padding: AppSize.s24,
-  borderRadius: AppSize.s20,
+  padding: Sizes.s24,
+  borderRadius: Sizes.s20,
   position: 'relative',
 }));
 
 export const Category = styled('div')(() => ({
-  backgroundColor: AppColor.primary,
-  color: AppColor.white,
-  fontSize: AppFontSize.s12,
+  backgroundColor: Colors.primary,
+  color: Colors.white,
+  fontSize: FontSize.s12,
   padding: '7px 16px',
   borderRadius: '0 0 12px 12px',
   position: 'absolute',
@@ -40,6 +37,7 @@ export const Image = styled('img')(() => ({
 }));
 
 export const Title = styled('div')(() => ({
-  fontWeight: AppFontWeight.bold,
-  fontSize: AppFontSize.s16,
+  fontWeight: FontWeight.bold,
+  fontSize: FontSize.s16,
+  color: Colors.textBold,
 }));

@@ -1,11 +1,8 @@
 import { styled } from '@mui/system';
-import {
-  AppColor,
-  AppSize,
-  AppFontFamily,
-  AppFontSize,
-  AppFontWeight,
-} from '@components/Theme/config';
+import { Colors } from '@resources/utils/ColorManager';
+import { FontFamily, FontSize, FontWeight } from '@resources/utils/FontManager';
+import { Sizes } from '@resources/utils/SizesManager';
+
 import { TextFieldProps } from './index';
 
 const radiusStyle = (props: TextFieldProps) => {
@@ -14,46 +11,46 @@ const radiusStyle = (props: TextFieldProps) => {
   } else if (props.endAndornment) {
     return '24px 0 0 24px !important';
   } else {
-    return AppSize.s24;
+    return Sizes.s24;
   }
 };
 
 export const Input = styled('input')((props: TextFieldProps) => ({
   padding: props.inputSize === 'lg' ? '4px 24px' : '4px 16px',
-  color: AppColor.text,
+  color: Colors.text,
   width: '100%',
-  background: AppColor.white,
+  background: Colors.white,
   borderWidth: '1px',
-  borderColor: AppColor.white,
+  borderColor: Colors.white,
   borderStyle: 'solid',
   borderBottomWidth: '1px',
   borderRadius: radiusStyle(props),
   height: props.inputSize === 'lg' ? '48px' : '41.5px',
   lineHeight: 1.5,
-  fontFamily: AppFontFamily.default,
-  fontSize: props.inputSize === 'lg' ? AppFontSize.s14 : AppFontSize.s14,
-  fontWeight: AppFontWeight.regular,
+  fontFamily: FontFamily.default,
+  fontSize: props.inputSize === 'lg' ? FontSize.s14 : FontSize.s14,
+  fontWeight: FontWeight.regular,
   paddingRight: props.type === 'password' ? '50px' : '16px',
 
   '&::placeholder': {
-    color: AppColor.textSurface,
-    fontWeight: AppFontWeight.regular,
+    color: Colors.textSurface,
+    fontWeight: FontWeight.regular,
   },
 
   '&:focus': {
     outline: 'none',
-    borderColor: AppColor.text,
+    borderColor: Colors.text,
     borderStyle: 'solid',
     borderWidth: '1px',
   },
 
   '&:disabled': {
-    color: AppColor.textDisabled,
-    borderColor: AppColor.textDisabled,
-    backgroundColor: AppColor.textSurface,
+    color: Colors.textDisabled,
+    borderColor: Colors.textDisabled,
+    backgroundColor: Colors.textSurface,
 
     '&::placeholder': {
-      color: AppColor.textSurface,
+      color: Colors.textSurface,
     },
   },
 }));
@@ -82,7 +79,7 @@ export const Toggle = styled('button')((props) => ({
 
   '& svg': {
     '& path': {
-      fill: props.disabled ? AppColor.textDisabled : AppColor.text,
+      fill: props.disabled ? Colors.textDisabled : Colors.text,
     },
   },
 }));
