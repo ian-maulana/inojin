@@ -1,17 +1,39 @@
-import Card from '@components/Card';
+import ScrollspyNav from 'react-scrollspy-nav';
+
+import About from '@containers/About';
+import Contact from '@containers/Contact';
+import Experience from '@containers/Experience';
+import Footer from '@containers/Footer';
+import Navbar from '@containers/Navbar';
+import Portofolio from '@containers/Portofolio';
+import Parallax from '@containers/Parallax';
+import TechStack from '@containers/TechStack';
+import Milestones from '@containers/Milestones';
 
 interface Props {}
 
 const Home: React.FC<Props> = () => {
   return (
     <>
-      <Card>
-        <p>
-          I am Bolby Doe, web developer from London, United Kingdom. I have rich
-          experience in web site design and building and customization, also I
-          am good at WordPress.
-        </p>
-      </Card>
+      <Parallax />
+      <ScrollspyNav
+        scrollTargetIds={['about', 'experience', 'works', 'contact']}
+        offset={-120}
+        activeNavClass="active"
+        scrollDuration="300"
+        headerBackground="false"
+      >
+        <Navbar />
+      </ScrollspyNav>
+      <About />
+      <Milestones />
+      <Experience />
+      <div id="works">
+        <Portofolio />
+        <TechStack />
+      </div>
+      <Contact />
+      <Footer />
     </>
   );
 };

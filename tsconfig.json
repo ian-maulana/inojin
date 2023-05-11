@@ -17,7 +17,7 @@
     "jsx": "react-jsx",
     "baseUrl": ".",
     "paths": {
-      "@locales/*": ["src/presentation/resources/locales/*"],
+      "@resources/*": ["src/presentation/resources/*"],
       "@components/*": ["src/presentation/components/*"],
       "@containers/*": ["src/presentation/containers/*"],
       "@layouts/*": ["src/presentation/layouts/*"],
