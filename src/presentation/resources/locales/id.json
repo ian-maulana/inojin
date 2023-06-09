@@ -1,4 +1,7 @@
 {
+  "thisExampleProjectsLabel": "Ini contoh project",
+  "viewLabel": "Lihat",
+  "portofolioTitle": "Karya Terbaru (Segera Hadir)",
   "about_description": "Saya Ian Maulana, Frontend Developer dari Jakarta, Indonesia. Saya memiliki pengalaman dalam pengembangan web, mobile, dan saya juga mahir dalam pengembangan backend.",
   "about_hire_btn": "Rekrut Saya!",
   "about_title": "Siapa Saya?",
@@ -43,7 +46,7 @@
   "all_right_reserved": "Hak cipta dilindungi.",
   "navbar_about": "Profil",
   "navbar_experience": "Pengalaman",
-  "navbar_works": "Portofolio",
+  "navbar_works": "Karya",
   "navbar_contact": "Kontak",
   "milestone_hours": "jam",
   "milestone_projects": "proyek",

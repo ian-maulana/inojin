@@ -1,4 +1,6 @@
+import { useTranslation } from 'react-i18next';
 import ContainedButton from '@components/ContainedButton';
+
 import { Category, Container, Group, Image, Title } from './styles';
 
 interface Props {
@@ -6,6 +8,8 @@ interface Props {
 }
 
 const CardButton: React.FC<Props> = ({ data }) => {
+  const { t } = useTranslation('translation');
+
   return (
     <Container>
       <Category>{data.category}</Category>
@@ -14,7 +18,7 @@ const CardButton: React.FC<Props> = ({ data }) => {
       <Group>
         <Title>{data.title}</Title>
         <ContainedButton size="sm" color="secondary">
-          Lihat
+          {t('viewLabel')}
         </ContainedButton>
       </Group>
     </Container>

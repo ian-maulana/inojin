@@ -73,9 +73,9 @@ const Experience: React.FC<Props> = () => {
         <Grid xs={12} md={6}>
           <Card>
             <Body>
-              <Category>{t('experience_education_subtitle')}</Category>
+              <Category>{t('experience_job_subtitle')}</Category>
               <AutoScroll>
-                <Timeline lists={educations} />
+                <Timeline lists={jobs} />
               </AutoScroll>
             </Body>
           </Card>
@@ -84,9 +84,9 @@ const Experience: React.FC<Props> = () => {
         <Grid xs={12} md={6}>
           <Card>
             <Body>
-              <Category>{t('experience_job_subtitle')}</Category>
+              <Category>{t('experience_education_subtitle')}</Category>
               <AutoScroll>
-                <Timeline lists={jobs} />
+                <Timeline lists={educations} />
               </AutoScroll>
             </Body>
           </Card>
