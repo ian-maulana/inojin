@@ -10,10 +10,10 @@ const Footer: React.FC<Props> = () => {
   const { t } = useTranslation('translation');
 
   const years = useMemo(() => {
-    const start: string = process.env.RELEASE_YEAR ?? '';
+    const start: string = process.env.REACT_APP_RELEASE_YEAR ?? '';
     const end: string = dayjs().format('YYYY');
 
-    if (start !== end) {
+    if (String(start) !== String(end)) {
       return `${start} - ${end}`;
     }
 
