@@ -15,7 +15,7 @@ const Portofolio: React.FC<Props> = () => {
       {
         id: 1,
         category: 'Website',
-        title: t('thisExampleProjectsLabel'),
+        title: t('this_example_projects_label'),
         description: `Lorem ipsum dolor sit amet quo ei simul congue exerci ad nec admodum perfecto.`,
         imageUrl:
           'https://jthemes.net/themes/html/bolby/demo/images/works/1.svg',
@@ -24,7 +24,7 @@ const Portofolio: React.FC<Props> = () => {
       {
         id: 2,
         category: 'Mobile App',
-        title: t('thisExampleProjectsLabel'),
+        title: t('this_example_projects_label'),
         description: `Lorem ipsum dolor sit amet quo ei simul congue exerci ad nec admodum perfecto.`,
         imageUrl:
           'https://jthemes.net/themes/html/bolby/demo/images/works/3.svg',
@@ -33,7 +33,7 @@ const Portofolio: React.FC<Props> = () => {
       {
         id: 3,
         category: 'Website',
-        title: t('thisExampleProjectsLabel'),
+        title: t('this_example_projects_label'),
         description: `Lorem ipsum dolor sit amet quo ei simul congue exerci ad nec admodum perfecto.`,
         imageUrl:
           'https://jthemes.net/themes/html/bolby/demo/images/works/6.svg',
@@ -44,7 +44,7 @@ const Portofolio: React.FC<Props> = () => {
 
   return (
     <>
-      <Heading>{t('portofolioTitle')}</Heading>
+      <Heading>{t('portofolio_title')}</Heading>
 
       <Grid container spacing={3} marginBottom="60px">
         {works.map((work) => (
