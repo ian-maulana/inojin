@@ -1,4 +1,5 @@
 import { Fragment, memo, useMemo } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import Heading from '@components/Heading';
 import Grid from '@mui/system/Unstable_Grid/Grid';
@@ -7,12 +8,14 @@ import CardButton from '@components/CardButton';
 interface Props {}
 
 const Portofolio: React.FC<Props> = () => {
+  const { t } = useTranslation('translation');
+
   const works = useMemo(() => {
     return [
       {
         id: 1,
         category: 'Website',
-        title: 'Sistem Informasi',
+        title: t('thisExampleProjectsLabel'),
         description: `Lorem ipsum dolor sit amet quo ei simul congue exerci ad nec admodum perfecto.`,
         imageUrl:
           'https://jthemes.net/themes/html/bolby/demo/images/works/1.svg',
@@ -21,7 +24,7 @@ const Portofolio: React.FC<Props> = () => {
       {
         id: 2,
         category: 'Mobile App',
-        title: 'Sistem Informasi',
+        title: t('thisExampleProjectsLabel'),
         description: `Lorem ipsum dolor sit amet quo ei simul congue exerci ad nec admodum perfecto.`,
         imageUrl:
           'https://jthemes.net/themes/html/bolby/demo/images/works/3.svg',
@@ -30,18 +33,18 @@ const Portofolio: React.FC<Props> = () => {
       {
         id: 3,
         category: 'Website',
-        title: 'Sistem Informasi',
+        title: t('thisExampleProjectsLabel'),
         description: `Lorem ipsum dolor sit amet quo ei simul congue exerci ad nec admodum perfecto.`,
         imageUrl:
           'https://jthemes.net/themes/html/bolby/demo/images/works/6.svg',
         ActionUrl: 'https://google.com',
       },
     ];
-  }, []);
+  }, [t]);
 
   return (
     <>
-      <Heading>Recent Works</Heading>
+      <Heading>{t('portofolioTitle')}</Heading>
 
       <Grid container spacing={3} marginBottom="60px">
         {works.map((work) => (
