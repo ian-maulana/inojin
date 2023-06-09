@@ -12,8 +12,7 @@ function formatThousand(value: any) {
 export const required = (msg?: string) => {
   return (value: any, _data: any, label: string): string | undefined => {
     const error: string =
-      msg ||
-      i18next?.t(`translation:${msg || 'validationRequired'}`, { label });
+      msg || i18next?.t(`translation:${'validation_required'}`, { label });
 
     return value && value.toString().trim() ? undefined : error;
   };
@@ -31,7 +30,7 @@ export function email(msg?: string) {
       /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     const isValidEmail = emailRegex.test(String(value));
     const error: string =
-      msg || i18next?.t(`translation:${msg || 'validationEmail'}`, { label });
+      msg || i18next?.t(`translation:${'validation_email'}`, { label });
     return isValidEmail ? undefined : error;
   };
 }
@@ -47,7 +46,7 @@ export function password(msg?: string) {
       /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[@%+!#$&*)/(^?_\\-]).{8,}$/g;
     const isValid = regex.test(String(value));
     const error: string =
-      msg || i18next.t(`translation:${msg || 'validationPassword'}`, { label });
+      msg || i18next.t(`translation:${'validation_password'}`, { label });
     return isValid ? undefined : error;
   };
 }
@@ -64,7 +63,7 @@ export function url(msg?: string) {
       /(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g;
     const isValidURL = value.match(regex);
     const error: string =
-      msg || i18next.t(`translation:${msg || 'validationUrl'}`, { label });
+      msg || i18next.t(`translation:${'validation_url'}`, { label });
     return isValidURL ? undefined : error;
   };
 }
@@ -80,7 +79,7 @@ export function ip(msg?: string) {
       /^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$/gi;
     const isValidEmail = regex.test(String(value));
     const error: string =
-      msg || i18next.t(`translation:${msg || 'validationIp'}`, { label });
+      msg || i18next.t(`translation:${'validation_ip'}`, { label });
     return isValidEmail ? undefined : error;
   };
 }
@@ -100,7 +99,7 @@ export function phone(msg?: string) {
             /^(\+?\d{0,4})?\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{4}\)?)$/,
           ) !== null && !value.toString().match(/^\b(\d)\1{8,}\b$/) !== null;
       const error: string =
-        msg || i18next.t(`translation:${msg || 'validationPhone'}`, { label });
+        msg || i18next.t(`translation:${'validation_phone'}`, { label });
       return isValidEmail ? undefined : error;
     }
   };
@@ -114,7 +113,7 @@ export function phone(msg?: string) {
 export const mustNumber = (msg?: string) => {
   return (value: any, _data: any, label: string): string | undefined => {
     const error: string =
-      msg || i18next.t(`translation:${msg || 'validationNumber'}`, { label });
+      msg || i18next.t(`translation:${'validation_number'}`, { label });
     return isNaN(value) ? error : undefined;
   };
 };
@@ -129,7 +128,7 @@ export const min = (min: number, msg?: string) => {
     if (value.length < min) {
       const error: string =
         msg ||
-        i18next.t(`translation:${msg || 'validationMin'}`, {
+        i18next.t(`translation:${'validation_min'}`, {
           label,
           min: formatThousand(min),
         });
@@ -150,7 +149,7 @@ export const max = (max: number, msg?: string) => {
     if (value.length < max) {
       const error: string =
         msg ||
-        i18next.t(`translation:${msg || 'validationMax'}`, {
+        i18next.t(`translation:${'validation_max'}`, {
           label,
           min: formatThousand(max),
         });
@@ -170,8 +169,7 @@ export const notIncludes = (comparison: string, msg?: string) => {
   return (value: any, _data: any, label: string): string | undefined => {
     if (value.toLowerCase().includes(comparison.toLowerCase())) {
       const error: string =
-        msg ||
-        i18next.t(`translation:${msg || 'validationNotIncludes'}`, { label });
+        msg || i18next.t(`translation:${'validation_not_includes'}`, { label });
       return error;
     }
 
@@ -189,7 +187,7 @@ export const minValue = (min: number, msg?: string) => {
     if (value) {
       const error: string =
         msg ||
-        i18next.t(`translation:${msg || 'validationMinValue'}`, {
+        i18next.t(`translation:${'validation_min_value'}`, {
           label,
           min: formatThousand(Number(min)),
         });
@@ -208,7 +206,7 @@ export const maxValue = (max: number, msg?: string) => {
     if (value) {
       const error: string =
         msg ||
-        i18next.t(`translation:${msg || 'validationMaxValue'}`, {
+        i18next.t(`translation:${'validation_max_value'}`, {
           label,
           max: formatThousand(Number(max)),
         });
@@ -231,7 +229,7 @@ export const match = (
   return (value: any, data: any, label: any): string | undefined => {
     const error: string =
       msg ||
-      i18next.t(`translation:${msg || 'validationMatch'}`, {
+      i18next.t(`translation:${'validation_match'}`, {
         label,
         comparisonLabel,
       });
@@ -248,7 +246,7 @@ export const maxDate = (max: string, msg?: string) => {
   return (value: any, _data: any, label: string): string | undefined => {
     const error: string =
       msg ||
-      i18next.t(`translation:${msg || 'validationMaxDate'}`, {
+      i18next.t(`translation:${'validation_max_date'}`, {
         label,
         max: formatThousand(max),
       });
@@ -270,7 +268,12 @@ export const ext = (exts: String[], msg?: string) => {
     if (value) {
       const mime = value.name.split('.');
 
-      const error: string = msg || `${label} tidak valid`;
+      const error: string =
+        msg ||
+        i18next.t(`translation:${'validation_ext'}`, {
+          label,
+          max: formatThousand(max),
+        });
       return exts.includes(mime[1]) === true ? undefined : error;
     }
 

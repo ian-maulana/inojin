@@ -2,7 +2,7 @@ import { memo } from 'react';
 import { Trans, useTranslation } from 'react-i18next';
 
 import { FormRenderProps } from 'react-final-form';
-import { required } from '@app/Validators';
+import { email, min, required } from '@app/Validators';
 import { Colors } from '@resources/utils/ColorManager';
 import { FontSize, FontWeight } from '@resources/utils/FontManager';
 
@@ -86,7 +86,7 @@ const Contact: React.FC<Props> = () => {
                     label={t('input_email_label')}
                     placeholder={t('input_email_placeholder')}
                     inputSize="lg"
-                    validate={[required]}
+                    validate={[required, email]}
                   />
                 </FormGroup>
               </Grid>
@@ -113,7 +113,7 @@ const Contact: React.FC<Props> = () => {
                     label={t('input_message_label')}
                     placeholder={t('input_message_placeholder')}
                     inputSize="lg"
-                    validate={[required]}
+                    validate={[required, min(50)]}
                   />
                 </FormGroup>
               </Grid>
