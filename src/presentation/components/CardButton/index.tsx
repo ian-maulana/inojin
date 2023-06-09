@@ -18,7 +18,7 @@ const CardButton: React.FC<Props> = ({ data }) => {
       <Group>
         <Title>{data.title}</Title>
         <ContainedButton size="sm" color="secondary">
-          {t('viewLabel')}
+          {t('view_label')}
         </ContainedButton>
       </Group>
     </Container>
