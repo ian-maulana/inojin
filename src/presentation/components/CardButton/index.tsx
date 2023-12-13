@@ -16,11 +16,22 @@ const CardButton: React.FC<Props> = ({ data }) => {
       <Image src={data.imageUrl} alt={data.title} />
 
       <Group>
-        <Title>{data.title}</Title>
-        <ContainedButton size="sm" color="secondary">
+        <div>
+          <Title>{data.title}</Title>
+          <p style={{ fontSize: '12px' }}>{data.description}</p>
+        </div>
+      </Group>
+
+      {data.actionUrl && (
+        <ContainedButton
+          size="sm"
+          color="secondary"
+          onClick={() => window.open(data.actionUrl)}
+          fullWidth
+        >
           {t('view_label')}
         </ContainedButton>
-      </Group>
+      )}
     </Container>
   );
 };
