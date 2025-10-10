@@ -33,7 +33,7 @@ const Portofolio: React.FC<Props> = () => {
         id: 3,
         category: 'Website',
         title: 'Amanda Hartanto Batik',
-        description: `Company Profile sekaligus web penjualan untuk usaha butik milak amanda hartanto`,
+        description: `Company Profile sekaligus web penjualan untuk usaha butik milik amanda hartanto`,
         imageUrl: 'https://ianmaulana.sirv.com/ianmaulana.me/amandabutik.png',
         actionUrl: 'https://amandahartantobatik.com',
       },
@@ -97,10 +97,37 @@ const Portofolio: React.FC<Props> = () => {
       {
         id: 10,
         category: 'Mobile Apps',
-        title: 'Actionpay',
+        title: 'Agent Remit',
         description:
-          'Aplikasi yang digunakan untuk melakukan transaksi transfer ke luar negeri',
+          'Aplikasi yang digunakan untuk melakukan transaksi transfer ke luar negeri ke indonesia (Incoming)',
         imageUrl: 'https://ianmaulana.sirv.com/ianmaulana.me/actionpay.png',
+        actionUrl: '',
+      },
+      {
+        id: 11,
+        category: 'Mobile Apps',
+        title: 'Agent Travel',
+        description:
+          'Aplikasi yang digunakan untuk melakukan pembelian voucher',
+        imageUrl: 'https://ianmaulana.sirv.com/ianmaulana.me/travelapp.png',
+        actionUrl: '',
+      },
+      {
+        id: 12,
+        category: 'Mobile Apps',
+        title: 'Superapp',
+        description:
+          'Aplikasi yang digunakan untuk melakukan transaksi ke luar negeri, domestik, dan PPOB',
+        imageUrl: 'https://ianmaulana.sirv.com/ianmaulana.me/superapp.png',
+        actionUrl: '',
+      },
+      {
+        id: 13,
+        category: 'Mobile Apps',
+        title: 'Omni Mobile',
+        description:
+          'Aplikasi yang digunakan untuk melakukan transaksi ke virtual account dan domestik transfer',
+        imageUrl: 'https://ianmaulana.sirv.com/ianmaulana.me/omni-mobile.png',
         actionUrl: '',
       },
     ];
