@@ -46,18 +46,48 @@ const Experience: React.FC<Props> = () => {
     return [
       {
         id: 1,
+        year: t('experience_ap_year'),
+        title: t('experience_ap_title'),
+        description: t('experience_ap_description'),
+      },
+      {
+        id: 2,
+        year: t('experience_amt_year'),
+        title: t('experience_amt_title'),
+        description: t('experience_amt_description'),
+      },
+      {
+        id: 3,
         year: t('experience_dk_year'),
         title: t('experience_dk_title'),
         description: t('experience_dk_description'),
       },
       {
-        id: 2,
+        id: 4,
+        year: t('experience_mpp_year'),
+        title: t('experience_mpp_title'),
+        description: t('experience_mpp_description'),
+      },
+      {
+        id: 5,
+        year: t('experience_etb_year'),
+        title: t('experience_etb_title'),
+        description: t('experience_etb_description'),
+      },
+      {
+        id: 6,
+        year: t('experience_kargoloka_year'),
+        title: t('experience_kargoloka_title'),
+        description: t('experience_kargoloka_description'),
+      },
+      {
+        id: 7,
         year: t('experience_la_year'),
         title: t('experience_la_title'),
         description: t('experience_la_description'),
       },
       {
-        id: 3,
+        id: 8,
         year: t('experience_icon_year'),
         title: t('experience_icon_title'),
         description: t('experience_icon_description'),
